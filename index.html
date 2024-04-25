@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акватика</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <main id="main">
+        <div class="feedback__modal" id="feedback-modal">
+            <div class="feedback__container">
+                <button class="btn-reset feedback__close" id="feedback-close">
+                    <span class="feedback__close-span"></span>
+                    <span class="feedback__close-span"></span>
+                </button>
+                <h2 class="feedback__title">
+                    Что вас интересует?
+                </h2>
+                <form action="#" class="feedback__form">
+                    <div class="feedback__check-cont" id="feedback-checkbox">
+                    </div>
+                    <ul class="ul-reset feedback__inputs-list">
+                        <li class="feedback__inputs-item">
+                            <input type="text" required class="feedback__input-area">
+                            <label class="feedback__input-label">
+                                Введите ваше имя
+                            </label>
+                        </li>
+                        <li class="feedback__inputs-item">
+                            <input type="text" required class="feedback__input-area">
+                            <label class="feedback__input-label">
+                                Введите ваш email
+                            </label>
+                        </li>
+                        <li class="feedback__inputs-item">
+                            <input type="text" required class="feedback__input-area">
+                            <label class="feedback__input-label">
+                                Введите ваш телефон
+                            </label>
+                        </li>
+                    </ul>
+                    <button class="btn-reset feedback__submit" id="feedback-submit" type="submit">Отправить</button>
+                </form>
+                <p class="feedback__descr">
+                    Спасибо! Мы свяжемся с вами в ближайшее время.
+                </p>
+            </div>
+        </div>
+        <section class="hero">
+            <div class="container">
+                <header class="header">
+                    <nav class="header__nav" id="header-nav">
+                        <button class="btn-reset header__burger" id="burger-btn">
+                            <span class="burger-span"></span>
+                            <span class="burger-span"></span>
+                            <span class="burger-span"></span>
+                        </button>
+                        <ul class="ul-reset header__list" id="header-nav-ul">
+                        </ul>
+                    </nav>
+                    <div class="header__feedback">
+                        <button class="btn-reset btn-1 header__feedback-btn" id="feedback-open">
+                            Обратный звонок
+                        </button>
+                        <ul class="ul-reset header__feedback-icons">
+                            <li class="icon-1__cont header__feedback-item">
+                                <a href="#" class="header__feedback-link">
+                                    <svg width="26" height="26" viewbox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="icon-svg" d="M16.6642 0.25H8.83575C1.6915 0.25 0 1.9415 0 9.08575V16.9142C0 24.0585 1.6915 25.75 8.83575 25.75H16.6642C23.8085 25.75 25.5 24.0585 25.5 16.9142V9.08575C25.5 1.9415 23.7904 0.25 16.6642 0.25ZM20.587 18.4432H18.734C18.0327 18.4432 17.816 17.8854 16.5559 16.6082C15.4583 15.5457 14.9728 15.4023 14.7029 15.4023C14.3246 15.4023 14.2163 15.5107 14.2163 16.0324V17.7058C14.2163 18.1563 14.0728 18.4262 12.8849 18.4262C10.9236 18.4262 8.74544 17.2383 7.2165 15.0241C4.913 11.7856 4.28188 9.35563 4.28188 8.852C4.28188 8.58212 4.39025 8.33031 4.91194 8.33031H6.76494C7.23244 8.33031 7.41306 8.546 7.59369 9.04962C8.51062 11.6952 10.0406 14.0168 10.6707 14.0168C10.9044 14.0168 11.0128 13.9084 11.0128 13.3156V10.5786C10.9406 9.31844 10.2744 9.21112 10.2744 8.76169C10.2744 8.54494 10.455 8.32925 10.7419 8.32925H13.6574C14.0537 8.32925 14.1971 8.54494 14.1971 9.01244V12.7025C14.1971 13.0978 14.3778 13.2422 14.4851 13.2422C14.7188 13.2422 14.9175 13.0977 15.3489 12.6664C16.6812 11.1725 17.6343 8.869 17.6343 8.869C17.7607 8.59913 17.9764 8.34731 18.445 8.34731H20.298C20.8558 8.34731 20.9823 8.63419 20.8558 9.0305C20.6221 10.1111 18.3547 13.3134 18.3547 13.3134C18.1571 13.6375 18.0848 13.7809 18.3547 14.1422C18.5523 14.4121 19.2004 14.9699 19.6329 15.4735C20.4244 16.3734 21.0354 17.1289 21.1979 17.6516C21.3786 18.1723 21.1076 18.4421 20.5859 18.4421L20.587 18.4432Z" fill="white"/>
+                                    </svg>                                        
+                                </a>
+                            </li>
+                            <li class="icon-1__cont header__feedback-item">
+                                <a href="#" class="icon-1 header__feedback-link">
+                                    <svg width="26" height="26" viewbox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_4_7)">
+                                        <path class="icon-svg" d="M20.7188 0.25C22.0358 0.25 23.1619 0.717611 24.0972 1.65283C25.0324 2.58805 25.5 3.71419 25.5 5.03125V20.9688C25.5 22.2858 25.0324 23.4119 24.0972 24.3472C23.1619 25.2824 22.0358 25.75 20.7188 25.75H17.5977V15.8721H20.9014L21.3994 12.0205H17.5977V9.56348C17.5977 8.94368 17.7277 8.47884 17.9878 8.16895C18.2479 7.85905 18.7542 7.7041 19.5068 7.7041L21.5322 7.6875V4.25098C20.835 4.15137 19.8499 4.10156 18.5771 4.10156C17.0719 4.10156 15.8683 4.54427 14.9663 5.42969C14.0643 6.3151 13.6133 7.56576 13.6133 9.18164V12.0205H10.293V15.8721H13.6133V25.75H4.78125C3.46419 25.75 2.33805 25.2824 1.40283 24.3472C0.467611 23.4119 0 22.2858 0 20.9688V5.03125C0 3.71419 0.467611 2.58805 1.40283 1.65283C2.33805 0.717611 3.46419 0.25 4.78125 0.25H20.7188Z" fill="white"/>
+                                        </g><defs><clippath id="clip0_4_7">
+                                        <rect class="icon-svg" width="25.5" height="25.5" fill="white" transform="translate(0 0.25)"/>
+                                        </clippath></defs>
+                                    </svg>                                        
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="hero__info">
+                    <a href="index.html" class="hero__info-logo">
+                        <img src="img/logo_aquatica.svg" alt="Логотип">
+                    </a>
+                    <div class="hero__info-text">
+                        <h2 class="hero__info-title">
+                            Путешествие в тысячу миль
+                            <span>Начинается с первого клика</span>
+                        </h2>
+                        <button class="btn-reset hero__info-btn" id="hero-open">
+                            Хочу нырять...
+                        </button>
+                        <ul class="ul-reset hero__info-pluses">
+                            <li class="hero__pluses-item">
+                                <h2 class="hero__item-text">
+                                    Работаем с 2009 года
+                                </h2>
+                            </li>
+                            <li class="hero__pluses-item">
+                                <h2 class="hero__item-text">
+                                    Более 2500 учеников 
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hero__cards">
+                        <ul class="ul-reset hero__card-list" id="hero-card-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 270">
+                <path fill-opacity="1" d="M0,96L10.4,85.3C20.9,75,42,53,63,48C83.5,43,104,53,125,69.3C146.1,85,167,107,188,138.7C208.7,171,230,213,250,229.3C271.3,245,292,235,313,192C333.9,149,355,75,376,42.7C396.5,11,417,21,438,74.7C459.1,128,480,224,501,218.7C521.7,213,543,107,563,101.3C584.3,96,605,192,626,213.3C647,235,668,181,689,176C709.6,171,730,213,751,202.7C772.2,192,793,128,814,122.7C834.8,117,856,171,877,186.7C897.4,203,918,181,939,197.3C960,213,981,267,1002,256C1022.6,245,1043,171,1064,133.3C1085.2,96,1106,96,1127,101.3C1147.8,107,1169,117,1190,128C1210.4,139,1231,149,1252,133.3C1273,117,1294,75,1315,53.3C1335.7,32,1357,32,1377,48C1398.3,64,1419,96,1430,112L1440,128L1440,320L1429.6,320C1419.1,320,1398,320,1377,320C1356.5,320,1336,320,1315,320C1293.9,320,1273,320,1252,320C1231.3,320,1210,320,1190,320C1168.7,320,1148,320,1127,320C1106.1,320,1085,320,1064,320C1043.5,320,1023,320,1002,320C980.9,320,960,320,939,320C918.3,320,897,320,877,320C855.7,320,835,320,814,320C793,320,772,320,751,320C730.4,320,710,320,689,320C667.8,320,647,320,626,320C605.2,320,584,320,563,320C542.6,320,522,320,501,320C480,320,459,320,438,320C417.4,320,397,320,376,320C354.8,320,334,320,313,320C292.2,320,271,320,250,320C229.6,320,209,320,188,320C167,320,146,320,125,320C104.3,320,83,320,63,320C41.7,320,21,320,10,320L0,320Z"></path>
+            </svg>
+        </section>
+        <section class="info" id="about">
+            <div class="container">
+                <p class="info__descr-top">Обучение дайвингу в Москве</p>
+                <h1 class="info__title">
+                    Дайвинг <span>в Москве</span>
+                </h1>
+                <p class="info__descr-btm">
+                    Добро пожаловать! 
+                    На&nbsp;страницах нашего сайта вы&nbsp;найдете качественную, нужную информацию касаемо вашего увлечения. 
+                    Более подробно о&nbsp;нас вам расскажут разделы нашего сайта, благодаря отзывам, отчетам, статьям вы&nbsp;познакомитесь с&nbsp;нами поближе, узнаете, что дайвинг в&nbsp;Москве это реальность. 
+                    Много полезной информации вам предоставит социальный блог &laquo;Акватика&raquo; там&nbsp;же, вы&nbsp;можете размещать свои отчеты и&nbsp;отзывы о&nbsp;путешествиях, а&nbsp;так&nbsp;же находить новых друзей по&nbsp;увлечению. 
+                    Для прямого общения он-лайн, приглашаем Вас на&nbsp;тематический форум и&nbsp;в&nbsp;соц сети, где &laquo;живут&raquo; участники клуба которые всегда рады новым знакомствам.
+                </p>
+            </div>
+        </section>
+        <section class="sales" id="sales">
+            <div class="container">
+                <p class="sales__descr">
+                    УСПЕЙ ПРИОБРЕСТИ ПУТЕВКУ
+                </p>
+                <h2 class="sales__title">
+                    Горячие <span>предложения</span>
+                </h2>
+                <ul class="ul-reset card__list" id="sales-card"></ul>
+            </div>
+        </section>
+        <section class="review" id="review">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 225">
+                <path fill-opacity="1" d="M0,224L14.1,192C28.2,160,56,96,85,90.7C112.9,85,141,139,169,160C197.6,181,226,171,254,138.7C282.4,107,311,53,339,42.7C367.1,32,395,64,424,80C451.8,96,480,96,508,96C536.5,96,565,96,593,90.7C621.2,85,649,75,678,101.3C705.9,128,734,192,762,192C790.6,192,819,128,847,117.3C875.3,107,904,149,932,165.3C960,181,988,171,1016,149.3C1044.7,128,1073,96,1101,117.3C1129.4,139,1158,213,1186,208C1214.1,203,1242,117,1271,101.3C1298.8,85,1327,139,1355,154.7C1383.5,171,1412,149,1426,138.7L1440,128L1440,320L1425.9,320C1411.8,320,1384,320,1355,320C1327.1,320,1299,320,1271,320C1242.4,320,1214,320,1186,320C1157.6,320,1129,320,1101,320C1072.9,320,1045,320,1016,320C988.2,320,960,320,932,320C903.5,320,875,320,847,320C818.8,320,791,320,762,320C734.1,320,706,320,678,320C649.4,320,621,320,593,320C564.7,320,536,320,508,320C480,320,452,320,424,320C395.3,320,367,320,339,320C310.6,320,282,320,254,320C225.9,320,198,320,169,320C141.2,320,113,320,85,320C56.5,320,28,320,14,320L0,320Z"></path>
+            </svg>
+            <div class="container">
+                <p class="review__descr">
+                    УЗНАЙТЕ ЧТО О НАС ДУМАЮТ
+                </p>
+                <h2 class="review__title">
+                    Отзывы о нашей работе
+                </h2>
+                <div class="review__slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper" id="review-list">
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <button class="btn-reset btn-1 review__showall">
+                    Просмотреть все отзывы
+                </button>
+            </div>
+            <svg class="review__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 240">
+                <path fill-opacity="1" d="M0,32L14.1,32C28.2,32,56,32,85,48C112.9,64,141,96,169,101.3C197.6,107,226,85,254,96C282.4,107,311,149,339,165.3C367.1,181,395,171,424,170.7C451.8,171,480,181,508,181.3C536.5,181,565,171,593,165.3C621.2,160,649,160,678,154.7C705.9,149,734,139,762,138.7C790.6,139,819,149,847,138.7C875.3,128,904,96,932,112C960,128,988,192,1016,186.7C1044.7,181,1073,107,1101,112C1129.4,117,1158,203,1186,229.3C1214.1,256,1242,224,1271,213.3C1298.8,203,1327,213,1355,202.7C1383.5,192,1412,160,1426,144L1440,128L1440,320L1425.9,320C1411.8,320,1384,320,1355,320C1327.1,320,1299,320,1271,320C1242.4,320,1214,320,1186,320C1157.6,320,1129,320,1101,320C1072.9,320,1045,320,1016,320C988.2,320,960,320,932,320C903.5,320,875,320,847,320C818.8,320,791,320,762,320C734.1,320,706,320,678,320C649.4,320,621,320,593,320C564.7,320,536,320,508,320C480,320,452,320,424,320C395.3,320,367,320,339,320C310.6,320,282,320,254,320C225.9,320,198,320,169,320C141.2,320,113,320,85,320C56.5,320,28,320,14,320L0,320Z"></path>
+            </svg>
+        </section>
+        <section class="question">
+            <div class="container">
+                <p class="question__descr">
+                    Вы&nbsp;спросите, есть&nbsp;ли дайвинг в&nbsp;Москве? 
+                    Ответ однозначный&nbsp;&mdash; да, есть! 
+                    Акватика предлагает обучение, как в&nbsp;Москве, так и&nbsp;за&nbsp;рубежом. 
+                    Приятнее учиться на&nbsp;море скажете&nbsp;вы! 
+                    Наверное&nbsp;да, но&nbsp;обратите внимание на&nbsp;то, что многие клубы подводного плавания за&nbsp;
+                    рубежом могут не&nbsp;иметь Русскоговорящий персонал (инструкторов) квалификация тоже остается загадкой, 
+                    к&nbsp;тому&nbsp;же вам придется тратить драгоценное время отпуска на&nbsp;изучение учебников, таблиц, 
+                    отработку навыков, сдачу экзаменов. Не&nbsp;лучше&nbsp;ли пройти обучение рядом с&nbsp;домом в&nbsp;
+                    удобное время, и&nbsp;спокойной обстановке, с&nbsp;квалифицированными инструкторами, а&nbsp;во&nbsp;время 
+                    долгожданного отпуска наслаждаться всеми прелестями океана.
+                </p>
+            </div>
+        </section>
+        <section class="gallery" id="galery">
+            <div class="container">
+                <p class="gallery__descr">
+                    ЖИВЫЕ ЭМОЦИИ
+                </p>
+                <h2 class="gallery__title">
+                    Наша <span>фото-галерея</span>
+                </h2>
+                <div class="gallery__photos">
+                    <ul class="ul-reset gallery__list">
+                        <li class="gallery__item">
+                            <a data-src="img/gallery.webp" data-fancybox="gallery" data-caption="Caption #1">
+                                <img src="img/gallery.webp" alt="">
+                            </a>
+                        <li class="gallery__item">
+                            <a data-src="img/gallery.webp" data-fancybox="gallery" data-caption="Caption #2">
+                                <img src="img/gallery.webp" alt="">
+                            </a>
+                        </li>
+                        <li class="gallery__item">
+                            <a data-src="img/gallery.webp" data-fancybox="gallery" data-caption="Caption #3">
+                                <img src="img/gallery.webp" alt="">
+                            </a>
+                        </li>
+                        <li class="gallery__item">
+                            <a data-src="img/gallery.webp" data-fancybox="gallery" data-caption="Caption #4">
+                                <img src="img/gallery.webp" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn-reset gallery__showall">
+                    Смотреть&nbsp;все&nbsp;фото
+                </button>
+            </div>
+        </section>
+        <section class="question">
+            <div class="container">
+                <p class="question__descr">
+                    Подводное плавание – это истинное исцеление для каждого человека, меняющее приоритеты отдыха. 
+                    Это возможность найти новые эмоции, завести знакомства с интересными людьми. 
+                    Да,каждый человек к данному увлечению относится по своему, для многих этот мир выражает стремление к новому и прекрасному. 
+                    Многие люди, увлечённые дайвингом с уверенностью скажут, что подводное плаванье – смело можно отнести к одному из лучших  увлечений! 
+                    Оно позволяет почувствовать невесомость, насладиться самыми чудесными пейзажами, скрытыми от обычного поля зрения. 
+                    Здесь каждый чувствует себя свободным, будто бы парящим над землёй. Сегодня, это доступно каждому, кто стремится познать новое, к общению и позитивным эмоциям. 
+                    Это незабываемое ощущение надолго остается внутри и зовет обратно под воду.
+                </p>
+            </div>
+        </section>
+        <section class="blog">
+            <div class="container">
+                <p class="blog__descr">
+                    БУДЬ В КУРСЕ ПОСЛЕДНИХ НОВОСТЕЙ
+                </p>
+                <h2 class="blog__title">
+                    Наш <span>блог</span>
+                </h2>
+                <ul class="ul-reset card__list" id="blog-card">
+                </ul>
+            </div>
+        </section>
+        <section class="question">
+            <div class="container">
+                <p class="question__descr">
+                    Вы когда-нибудь задумывались над тем, что океан является самой древней субстанцией, которая существует на планете? 
+                    Разумеется,это не мыслящий Океан Станислава Лема под названием Солярис, но всё же, не вызывает сомнений,что зародилась жизнь именно в водных глубинах. 
+                    Не важно, будь это дайвинг в Москве, Подмосковное озеро  или погружение на океанских просторах, каждый раз, когда человек готовится к погружению он 
+                    испытывает волнение, которое вполне объяснимо. Водная гладь скрывает огромный потенциал, ведь она и является источником жизни. Океан манит, содержит огромное количество тайн и загадок. 
+                    Достаточно только раз погрузиться под воду, и позитивные ощущения уже никогда не забудутся, они останутся навсегда, как часть самой жизни.
+                </p>
+            </div>
+        </section>
+        <section class="invite" id="invite">
+            <div class="container">
+                <p class="invite__descr">
+                    ССЫЛКИ НА НАШИ СОЦИАЛЬНЫЕ СЕТИ
+                </p>
+                <h2 class="invite__title">
+                    Присоединяйся <span>к нам</span>
+                </h2>
+                <ul class="ul-reset invite__card-list">
+                    <li class="invite__card">
+                        <svg width="102" height="102" viewbox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M51.0002 2.03955C23.96 2.03955 2.04016 23.9594 2.04016 50.9996C2.04016 78.0397 23.96 99.9596 51.0002 99.9596C78.0404 99.9596 99.9602 78.0397 99.9602 50.9996C99.9602 23.9594 78.0404 2.03955 51.0002 2.03955ZM69.8294 57.2777C69.8294 57.2777 74.1593 61.5515 75.2252 63.5354C75.2558 63.5762 75.2711 63.617 75.2813 63.6373C75.7148 64.3666 75.8168 64.9328 75.6026 65.356C75.2456 66.0599 74.0216 66.4067 73.6034 66.4373H65.9534C65.423 66.4373 64.3112 66.2996 62.9648 65.3713C61.9295 64.6472 60.9095 63.4589 59.915 62.3012C58.4309 60.5774 57.1457 59.0882 55.8503 59.0882C55.6857 59.0879 55.5222 59.1137 55.3658 59.1646C54.3866 59.4809 53.132 60.8783 53.132 64.6012C53.132 65.764 52.214 66.4322 51.5663 66.4322H48.0626C46.8692 66.4322 40.6523 66.014 35.1443 60.2051C28.4021 53.0906 22.3331 38.8208 22.2821 38.6881C21.8996 37.765 22.6901 37.2704 23.552 37.2704H31.2785C32.3087 37.2704 32.6453 37.8976 32.8799 38.4535C33.1553 39.1012 34.1651 41.6768 35.8226 44.5736C38.5103 49.2962 40.1576 51.2138 41.4785 51.2138C41.7261 51.2108 41.9694 51.1478 42.1874 51.0302C43.9112 50.0714 43.5899 43.9258 43.5134 42.6508C43.5134 42.4111 43.5083 39.9019 42.626 38.6983C41.9936 37.8262 40.9175 37.4948 40.2647 37.3723C40.5289 37.0078 40.877 36.7121 41.2796 36.5104C42.4628 35.9188 44.5946 35.8321 46.7111 35.8321H47.8892C50.1842 35.8628 50.7758 36.0107 51.6071 36.2197C53.2901 36.6227 53.3258 37.709 53.1779 41.4268C53.132 42.4826 53.0861 43.676 53.0861 45.0836C53.0861 45.3896 53.0708 45.716 53.0708 46.0627C53.0198 47.9548 52.9586 50.102 54.2948 50.9842C54.469 51.0935 54.6705 51.1518 54.8762 51.1525C55.3403 51.1525 56.7377 51.1526 60.5219 44.6603C61.6889 42.5706 62.7031 40.3991 63.5564 38.1628C63.6329 38.0302 63.8573 37.6222 64.1225 37.4641C64.3182 37.3644 64.5352 37.3136 64.7549 37.3162H73.838C74.8274 37.3162 75.5057 37.4641 75.6332 37.8466C75.8576 38.4535 75.5924 40.3049 71.4461 45.9199L69.5948 48.3629C65.8361 53.2895 65.8361 53.5394 69.8294 57.2777Z" fill="url(#paint0_linear_15_373)"/>
+                            <defs>
+                            <lineargradient id="paint0_linear_15_373" x1="51.0002" y1="2.03955" x2="51.0002" y2="99.9596" gradientunits="userSpaceOnUse">
+                            <stop stop-color="#5FC9F3"/>
+                            <stop offset="1" stop-color="#55ABF5"/>
+                            </lineargradient>
+                            </defs>
+                        </svg>                            
+                        <h3 class="invite__card-title">
+                            уже более 5000 тысяч людей в курсе новостей
+                        </h3>
+                        <button class="btn-reset invite__card-btn">
+                            Присоединиться
+                        </button>
+                    </li>
+                    <li class="invite__card">
+                        <svg width="102" height="102" viewbox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_15_393)">
+                            <path d="M101.991 51C101.991 22.831 79.1605 0 50.9957 0C22.831 0 0 22.831 0 51C0 76.449 18.649 97.546 43.027 101.371V65.739H30.0815V50.9957H43.027V39.763C43.027 26.979 50.643 19.9197 62.288 19.9197C67.8682 19.9197 73.7035 20.9142 73.7035 20.9142V33.4645H67.2775C60.945 33.4645 58.9688 37.3958 58.9688 41.429V51H73.1127L70.8517 65.7432H58.9688V101.375C83.3467 97.5503 101.996 76.4532 101.996 51H101.991Z" fill="url(#paint0_linear_15_393)"/>
+                            </g>
+                            <defs>
+                            <lineargradient id="paint0_linear_15_393" x1="50.9979" y1="0" x2="50.9979" y2="101.375" gradientunits="userSpaceOnUse">
+                            <stop stop-color="#5FC9F3"/>
+                            <stop offset="1" stop-color="#55ABF5"/>
+                            </lineargradient>
+                            <clippath id="clip0_15_393">
+                            <rect width="102" height="102" fill="white"/>
+                            </clippath>
+                            </defs>
+                        </svg>                            
+                        <h3 class="invite__card-title">
+                            уже более 5000 тысяч людей в курсе новостей
+                        </h3>
+                        <button class="btn-reset invite__card-btn">
+                            Присоединиться
+                        </button>
+                    </li>
+                    <li class="invite__card">
+                        <svg width="102" height="102" viewbox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_15_404)">
+                            <path d="M1.32054 62.2367C0.455357 58.3852 0 54.4883 0 50.5914C0 22.6562 22.7223 0 50.7951 0C54.5746 0 58.3768 0.453125 62.0196 1.24609C33.9241 11.8945 11.8165 34.2109 1.32054 62.2367ZM90.7754 19.3711C87.6562 15.4062 84.0134 11.9625 79.8924 9.10781C45.8317 19.1445 19.2616 45.8336 9.38036 79.7953C12.2263 83.8961 15.7554 87.8609 19.6714 90.8969C29.4844 56.618 56.3732 29.3398 90.7754 19.3711ZM94.3728 76.6234C97.8335 70.9367 100.156 64.457 101.089 57.8641C83.0116 67.5836 68.0759 82.9219 58.3768 100.979C65.2071 99.982 71.787 97.5125 77.6384 93.8875C85.6071 96.8555 93.7808 99.393 102 101.5C99.8826 93.2305 97.3554 84.6211 94.3728 76.6234ZM101.135 43.6586C100.543 39.2406 99.3362 34.8906 97.5375 30.7898C66.1406 41.1664 41.4375 66.2695 31.2147 97.6484C35.3357 99.3703 39.6388 100.48 44.1013 101.092C54.6429 75.2414 75.2478 54.2391 101.135 43.6586Z" fill="url(#paint0_linear_15_404)"/>
+                            </g>
+                            <defs>
+                            <lineargradient id="paint0_linear_15_404" x1="51" y1="0" x2="51" y2="101.5" gradientunits="userSpaceOnUse">
+                            <stop stop-color="#5FC9F3"/>
+                            <stop offset="1" stop-color="#55ABF5"/>
+                            </lineargradient>
+                            <clippath id="clip0_15_404">
+                            <rect width="102" height="102" fill="white"/>
+                            </clippath>
+                            </defs>
+                        </svg>                            
+                        <h3 class="invite__card-title">
+                            уже более 5000 тысяч людей в курсе новостей
+                        </h3>
+                        <button class="btn-reset invite__card-btn">
+                            Присоединиться
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="footer__wawe">
+        </div>
+        <footer class="footer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 225">
+                <path fill-opacity="1" d="M0,160L20,176C40,192,80,224,120,224C160,224,200,192,240,170.7C280,149,320,139,360,133.3C400,128,440,128,480,133.3C520,139,560,149,600,160C640,171,680,181,720,154.7C760,128,800,64,840,85.3C880,107,920,213,960,213.3C1000,213,1040,107,1080,80C1120,53,1160,107,1200,149.3C1240,192,1280,224,1320,213.3C1360,203,1400,149,1420,122.7L1440,96L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path>
+            </svg>
+            <div class="container">
+                <div class="footer__contacts">
+                    <a href="#" class="footer__contacts-logo">
+                        <img src="img/logo_aquatica.svg" alt="Логотип">
+                    </a>
+                    <ul class="ul-reset footer__contacts-list">
+                        <li class="footer__contacts-item">
+                            <a href="tel:+74955456702" class="type-1 footer__contacts-link">
+                                +7 (495) 545 67 02
+                            </a>
+                        </li>
+                        <li class="footer__contacts-item">
+                            <a href="mailto:scuba-divers@mail.ru" class="type-1 footer__contacts-link">
+                                scuba-divers@mail.ru
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__info">
+                    <nav class="footer__nav">
+                        <ul class="ul-reset footer__nav-list" id="footer-nav">
+                        </ul>
+                    </nav>
+                    <h3 class="footer__warn">
+                        Все права защищены © 2010-2024
+                        Обучение дайвингу в Москве
+                    </h3>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/feedback-modal.js"></script>
+    <script type="module" src="js/home.js"></script>
+</body>
+</html>
